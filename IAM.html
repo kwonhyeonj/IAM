@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마! 이게 2026 롯데 자이언츠의 기세다!</title>
+    <!-- Google Fonts & Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        giantsRed: '#E30613',
+                        giantsNavy: '#041E42',
+                        giantsDarkNavy: '#021024',
+                        giantsGold: '#FFB800'
+                    },
+                    fontFamily: {
+                        title: ['"Black Han Sans"', 'sans-serif'],
+                        sans: ['"Pretendard"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom styling for extreme details, transitions and animations -->
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #021024;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Screen Shake Animation for "마!" interaction */
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(0px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(2px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(2px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+        .shake-active {
+            animation: shake 0.4s ease-in-out;
+        }
+
+        /* Flashlight/Flash Overlay for Busan Seagulls cheering */
+        .cheer-flash {
+            animation: pulse-flash 1s infinite alternate;
+        }
+        @keyframes pulse-flash {
+            0% { background-color: rgba(255, 255, 255, 0.05); }
+            100% { background-color: rgba(255, 255, 255, 0.25); }
+        }
+
+        /* Stadium Light Glow Effects */
+        .stadium-glow {
+            box-shadow: 0 0 80px 10px rgba(227, 6, 19, 0.35);
+        }
+
+        /* Blur/opacity effect for loss matching log */
+        .loss-blur {
+            filter: blur(1.2px);
+            opacity: 0.25;
+            transition: all 0.3s ease;
+        }
+        .loss-blur:hover {
+            filter: blur(0px);
+            opacity: 0.85;
+        }
+
+        /* Customized scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #021024;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E30613;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff2a38;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-giantsDarkNavy/90 backdrop-blur-md border-b border-white/10 px-4 py-3">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="font-title text-2xl tracking-wider text-giantsRed">LOTTE GIANTS</span>
+                <span class="bg-giantsRed text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">2026</span>
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="#intro" class="hover:text-giantsRed transition">기세 인트로</a>
+                <a href="#lineup" class="hover:text-giantsRed transition">거인 라인업</a>
+                <a href="#sounds" class="hover:text-giantsRed transition">사직의 소리</a>
+                <a href="#food-goods" class="hover:text-giantsRed transition">미식 & 굿즈</a>
+                <a href="#scoreboard" class="hover:text-giantsRed transition">흐린눈 스코어</a>
+                <a href="#cta" class="hover:text-giantsGold transition text-giantsGold">사직 직관팟 모집</a>
+            </div>
+            <!-- Quick Ticket Link -->
+            <a href="#cta" class="bg-giantsRed text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-red-700 transition flex items-center space-x-1 shadow-md shadow-giantsRed/20">
+                <span>탑승하기</span> <i class="fa-solid fa-bus"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- 1단계: 강렬한 기세 인트로 (Hero Section) -->
+    <header id="intro" class="relative overflow-hidden pt-12 pb-24 md:py-32 flex flex-col justify-center items-center text-center bg-gradient-to-b from-giantsNavy via-giantsDarkNavy to-giantsDarkNavy border-b border-white/5">
+        <!-- Floodlight Background Effect -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[300px] bg-giantsRed/10 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="relative z-10 px-4 max-w-4xl">
+            <!-- SSAFY Welcome Badge -->
+            <div class="inline-flex items-center space-x-2 bg-giantsNavy border border-blue-500/30 text-blue-300 text-xs font-bold px-4 py-1.5 rounded-full mb-6 shadow-md">
+                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                <span>SSAFY 1반 전용 도파민 가이드</span>
+            </div>
+            
+            <!-- Catchphrase -->
+            <h1 class="font-title text-4xl sm:text-6xl md:text-8xl tracking-tight text-white mb-6 drop-shadow-lg">
+                "마! 이게 <span class="text-giantsRed">2026 롯데</span>의<br class="sm:hidden"> 기세다!"
+            </h1>
+            
+            <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                빌드 에러 나고 알고리즘 막힐 땐 사직으로 온나! <br class="hidden sm:inline">
+                SSAFY 1반 동기들과 3대장 푸드 뜯으면서 웅장한 "마!" 떼창으로 스트레스 리셋할 사람?
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="playMaSound()" class="bg-giantsRed text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-red-700 transition transform hover:-translate-y-1 shadow-xl shadow-giantsRed/30 flex items-center space-x-2 active:scale-95">
+                    <span>"마!" 외쳐보기 (화면진동)</span>
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <a href="#lineup" class="bg-slate-800 text-white font-semibold px-8 py-4 rounded-xl text-lg hover:bg-slate-700 transition border border-white/10 hover:border-white/20">
+                    전력 분석 보기
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-giantsDarkNavy to-transparent"></div>
+    </header>
+
+    <!-- 2단계: 2026 거인들의 전력 (Lineup & Defensive Ground) -->
+    <section id="lineup" class="py-20 px-4 max-w-6xl mx-auto relative">
+        <div class="text-center mb-12">
+            <h2 class="font-title text-3xl md:text-5xl text-white mb-4">🏟️ 2026 거인들의 전력 배치도</h2>
+            <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
+                2026 공격과 수비를 극대화한 포메이션! 그라운드의 각 포지션을 누르면 <span class="text-giantsRed font-bold">선수의 주접&고증 가득한 능력치 카드</span>가 열립니다.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            
+            <!-- Ground Interactive Layout based on "수비.jpeg" (7 Cols) -->
+            <div class="lg:col-span-7 bg-giantsNavy/40 border border-white/10 rounded-3xl p-6 relative overflow-hidden shadow-2xl flex flex-col justify-between">
+                
+                <!-- Fan-shaped Baseball Field representation from "수비.jpeg" -->
+                <div class="relative w-full aspect-[4/3] bg-gradient-to-b from-emerald-800 to-emerald-950 border-b-8 border-giantsDarkNavy rounded-t-full overflow-hidden shadow-inner flex flex-col justify-end">
+                    
+                    <!-- Infield Dirt Representation -->
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-[85%] rounded-full bg-amber-900/35 border-2 border-dashed border-white/15 pointer-events-none"></div>
+                    
+                    <!-- Pitcher Mound area -->
+                    <div class="absolute bottom-[24%] left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-amber-900/50 border border-white/10 pointer-events-none"></div>
+                    
+                    <!-- White chalk foul lines starting from home plate -->
+                    <div class="absolute bottom-[2%] left-[10%] w-[45%] h-1 bg-white/20 origin-bottom-right rotate-[34deg] pointer-events-none"></div>
+                    <div class="absolute bottom-[2%] right-[10%] w-[45%] h-1 bg-white/20 origin-bottom-left -rotate-[34deg] pointer-events-none"></div>
+
+                    <!-- Interactive Player Nodes placed on positions matching "수비.jpeg" exactly -->
+                    
+                    <!-- OUTFIELD ROW (TOP) -->
+                    <!-- LF: 레이예스 -->
+                    <button onclick="selectPlayer('reyes')" class="absolute top-[22%] left-[18%] -translate-x-1/2 group flex flex-col items-center z-10 transition duration-300">
+                        <span class="bg-giantsNavy border-2 border-white text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold shadow-md">LF</span>
+                        <span class="mt-1 bg-giantsRed/90 group-hover:bg-giantsRed text-white font-bold text-xs sm:text-sm px-2 py-0.5 rounded-lg group-hover:scale-105 transition">레이예스</span>
+                    </button>
+                    <!-- CF: 황성빈 -->
+                    <button onclick="selectPlayer('hwang')" class="absolute top-[8%] left-1/2 -translate-x-1/2 group flex flex-col items-center z-10 transition duration-300">
+                        <span class="bg-giantsNavy border-2 border-white text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold shadow-md">CF</span>
+                        <span class="mt-1 bg-giantsRed/90 group-hover:bg-giantsRed text-white font-bold text-xs sm:text-sm px-2 py-0.5 rounded-lg group-hover:scale-105 transition">황성빈</span>
+                    </button>
+                    <!-- RF: 윤동희 -->
+                    <button onclick="selectPlayer('yoon')" class="absolute top-[22%] right-[18%] translate-x-1/2 group flex flex-col items-center z-10 transition duration-300">
+                        <span class="bg-giantsNavy border-2 border-white text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold shadow-md">RF</span>
+                        <span class="mt-1 bg-giantsRed/90 group-hover:bg-giantsRed text-white font-bold text-xs sm:text-sm px-2 py-0.5 rounded-lg group-hover:scale-105 transition">윤동희</span>
+                    </button>
+
+                    <!-- INFIELD BACK ROW -->
+                    <!-- SS: 전민재 -->
+                    <button onclick="selectPlayer('jeon')" class="absolute top-[42%] left-[32%] -translate-x-1/2 group flex flex-col items-center z-10 transition duration-300">
+                        <span class="bg-giantsNavy border border-white/50 text-white text-[8px] px-1 py-0.5 rounded-full font-bold shadow-md">SS</span>
+                        <span class="mt-0.5 bg-giantsRed/90 group-hover:bg-giantsRed text-white font-bold text-xs px-1.5 py-0.5 rounded group-hover:scale-105 transition">전민재</span>
+                    </button>
+                    <!-- 2B: 한태양 -->
+                    <button onclick="selectPlayer('han_ty')" class="absolute top-[42%] right-[32%] translate-x-1/2 group flex flex-col items-center z-10 transition duration-300">
+                        <span class="bg-giantsNavy border border-white/50 text-white text-[8px] px-1 py-0.5 rounded-full font-bold shadow-md">2B</span>
+                        <span class="mt-0.5 bg-giantsRed/90 group-hover:bg-giantsRed text-white font-bold text-xs px-1.5 py-0.5 rounded group-hover:scale-105 transition">한태양</span>
+                    </button>
+
+                    <!-- CORNERS (3B / 1B) -->
+                    <!-- 3B: 손호영 -->
+                    <button onclick="selectPlayer('son_hy')" class="absolute top-[58%] left-[12%] group flex flex-col items-center z-10 transition duration-300">
+                        <span class="bg-giantsNavy border border-white/50 text-white text-[8px] px-1 py-0.5 rounded-full font-bold shadow-md">3B</span>
+                        <span class="mt-0.5 bg-giantsRed/90 group-hover:bg-giantsRed text-white font-bold text-xs px-1.5 py-0.5 rounded group-hover:scale-105 transition">손호영</span>
+                    </button>
+                    <!-- 1B: 고승민 -->
+                    <button onclick="selectPlayer('ko')" class="absolute top-[58%] right-[12%] group flex flex-col items-center z-10 transition duration-300">
+                        <span class="bg-giantsNavy border border-white/50 text-white text-[8px] px-1 py-0.5 rounded-full font-bold shadow-md">1B</span>
+                        <span class="mt-0.5 bg-giantsRed/90 group-hover:bg-giantsRed text-white font-bold text-xs px-1.5 py-0.5 rounded group-hover:scale-105 transition">고승민</span>
+                    </button>
+
+                    <!-- PITCHERS & CATCHERS -->
+                    <!-- P: 김진욱 / 이이무라 -->
+                    <div class="absolute bottom-[24%] left-1/2 -translate-x-1/2 flex flex-col items-center space-y-1 z-10">
+                        <button onclick="selectPlayer('kim_ju')" class="group flex flex-col items-center bg-black/40 px-1 py-0.5 rounded border border-white/10">
+                            <span class="text-[7px] text-slate-300 uppercase leading-none">SP</span>
+                            <span class="text-[10px] font-bold text-white group-hover:text-giantsRed transition">김진욱</span>
+                        </button>
+                        <button onclick="selectPlayer('iimura')" class="group flex flex-col items-center bg-black/40 px-1 py-0.5 rounded border border-white/10">
+                            <span class="text-[7px] text-slate-300 uppercase leading-none">RP</span>
+                            <span class="text-[10px] font-bold text-white group-hover:text-giantsRed transition">이이무라</span>
+                        </button>
+                    </div>
+
+                    <!-- C: 손성빈 -->
+                    <button onclick="selectPlayer('son_sb')" class="absolute bottom-[4%] left-1/2 -translate-x-1/2 group flex flex-col items-center z-10 transition duration-300">
+                        <span class="bg-giantsNavy border border-white/50 text-white text-[8px] px-1 py-0.5 rounded-full font-bold shadow-md">C</span>
+                        <span class="mt-0.5 bg-giantsRed/90 group-hover:bg-giantsRed text-white font-bold text-xs px-1.5 py-0.5 rounded group-hover:scale-105 transition">손성빈</span>
+                    </button>
+                </div>
+
+                <!-- DH & Additional Controls inside Stadium view container -->
+                <div class="mt-4 flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-white/10 pt-4">
+                    <div class="bg-giantsDarkNavy border border-white/10 rounded-xl px-4 py-2.5 flex items-center justify-between space-x-3 w-full sm:w-[60%]">
+                        <span class="text-xs font-semibold text-slate-400">지명타자 (DH)</span>
+                        <button onclick="selectPlayer('han_dh')" class="group flex items-center space-x-1.5 bg-giantsRed/80 hover:bg-giantsRed px-3 py-1.5 rounded-lg transition text-white">
+                            <span class="font-bold text-xs">한동희</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                    <button onclick="togglePitcherDrawer(true)" class="w-full sm:w-auto bg-gradient-to-r from-indigo-800 to-giantsNavy text-white font-semibold text-xs px-5 py-3 rounded-xl border border-white/10 hover:border-white/20 transition flex items-center justify-center space-x-2">
+                        <span>🔥 투수진 더 보기 (김원중, 박정민, 현도훈)</span>
+                        <i class="fa-solid fa-angles-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Interactive Detail View & Starting Lineup Grid Column (5 Cols) -->
+            <div id="player-profile-column" class="lg:col-span-5 bg-gradient-to-br from-giantsNavy via-giantsDarkNavy to-giantsDarkNavy border border-white/10 rounded-3xl p-5 shadow-2xl relative min-h-[500px] flex flex-col justify-between">
+                
+                <!-- STARTING LINEUP PLACEHOLDER (Shows first, mimicking "라인업.jpeg" perfectly!) -->
+                <div id="lineup-placeholder-card" class="w-full h-full flex flex-col justify-between transition-all duration-300">
+                    <div class="flex flex-col h-full justify-between">
+                        <!-- Lineup Card Header -->
+                        <div class="border-b border-white/10 pb-3 mb-4">
+                            <div class="flex justify-between items-baseline">
+                                <h3 class="font-title text-3xl tracking-wide text-white">STARTING <span class="text-giantsRed">LINEUP</span></h3>
+                                <span class="text-[9px] bg-giantsRed text-white font-bold px-2 py-0.5 rounded">2026 SEASON</span>
+                            </div>
+                        </div>
+
+                        <!-- Single Full-Width Lineup List -->
+                        <div class="space-y-1 h-full flex flex-col justify-around">
+                            <div onclick="selectPlayer('hwang')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition">
+                                <span class="font-title text-xs italic text-blue-400 w-12">1. CF</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">황성빈</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#0</span>
+                            </div>
+                            <div onclick="selectPlayer('ko')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition">
+                                <span class="font-title text-xs italic text-blue-400 w-12">2. 1B</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">고승민</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#2</span>
+                            </div>
+                            <div onclick="selectPlayer('reyes')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition">
+                                <span class="font-title text-xs italic text-blue-400 w-12">3. LF</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">레이예스</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#29</span>
+                            </div>
+                            <div onclick="selectPlayer('han_dh')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition">
+                                <span class="font-title text-xs italic text-blue-400 w-12">4. DH</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">한동희</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#25</span>
+                            </div>
+                            <div onclick="selectPlayer('han_ty')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition">
+                                <span class="font-title text-xs italic text-blue-400 w-12">5. 2B</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">한태양</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#13</span>
+                            </div>
+                            <div onclick="selectPlayer('yoon')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition">
+                                <span class="font-title text-xs italic text-blue-400 w-12">6. RF</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">윤동희</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#91</span>
+                            </div>
+                            <div onclick="selectPlayer('jeon')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition">
+                                <span class="font-title text-xs italic text-blue-400 w-12">7. SS</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">전민재</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#2</span>
+                            </div>
+                            <div onclick="selectPlayer('son_sb')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition">
+                                <span class="font-title text-xs italic text-blue-400 w-12">8. C</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">손성빈</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#9</span>
+                            </div>
+                            <div onclick="selectPlayer('son_hy')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition">
+                                <span class="font-title text-xs italic text-blue-400 w-12">9. 3B</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">손호영</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#5</span>
+                            </div>
+                            <div onclick="selectPlayer('kim_ju')" class="cursor-pointer group flex items-center justify-between py-1 px-2 rounded hover:bg-white/5 transition border-t border-white/5 pt-1.5 mt-1">
+                                <span class="font-title text-xs italic text-red-400 w-12">SP</span>
+                                <span class="text-sm font-extrabold text-white group-hover:text-giantsGold transition">김진욱</span>
+                                <span class="text-[10px] text-slate-500 font-bold">#15</span>
+                            </div>
+                        </div>
+
+                        <p class="text-[9px] text-center text-slate-500 mt-4 border-t border-white/5 pt-2">그라운드 포지션 또는 위 라인업 리스트를 탭하시면 선수의 주접 고증 스탯이 보됩니다.</p>
+                    </div>
+                </div>
+
+                <!-- Actual Interactive Player Card (hidden by default, switches layout beautifully) -->
+                <div id="profile-card" class="hidden h-full flex flex-col justify-between space-y-4">
+                    <div>
+                        <!-- Player Header Info -->
+                        <div class="flex justify-between items-start border-b border-white/10 pb-3">
+                            <div>
+                                <span id="player-position" class="bg-giantsRed text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">포지션</span>
+                                <h3 id="player-name" class="font-title text-2xl mt-1 text-white">선수명</h3>
+                            </div>
+                            <span id="player-backnumber" class="font-title text-3xl text-giantsRed/30">#00</span>
+                        </div>
+
+                        <!-- Customized Signature Stats -->
+                        <div class="mt-4 space-y-3">
+                            <h4 class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">시그니처 주접 스탯</h4>
+                            <div id="player-stats" class="grid grid-cols-1 gap-2">
+                                <!-- Dynamic Stats Inject here -->
+                            </div>
+                        </div>
+
+                        <!-- Player Description -->
+                        <div class="mt-4 bg-white/5 border border-white/10 rounded-xl p-3.5">
+                            <p id="player-desc" class="text-slate-300 text-xs sm:text-sm leading-relaxed">선수 한줄 평...</p>
+                        </div>
+                    </div>
+
+                    <!-- Cheer / Walk-up Songs Area -->
+                    <div class="border-t border-white/10 pt-3 space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-semibold text-slate-400">사직 뮤직 플레이</span>
+                            <span class="text-[9px] text-giantsRed animate-pulse font-bold flex items-center space-x-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-giantsRed inline-block"></span> <span>2026 고증 완료</span>
+                            </span>
+                        </div>
+                        
+                        <!-- Walkup song -->
+                        <div class="bg-black/30 rounded-xl p-2.5 flex justify-between items-center border border-white/5">
+                            <div class="flex items-center space-x-2.5">
+                                <div class="w-7 h-7 rounded-lg bg-indigo-950 flex items-center justify-center text-giantsGold text-xs">
+                                    <i class="fa-solid fa-headphones"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[8px] text-slate-400 font-bold uppercase leading-none">등장곡 (Walk-Up)</p>
+                                    <p id="player-walkup" class="text-xs font-bold text-white mt-0.5 truncate max-w-[150px] sm:max-w-[190px]">곡 제목</p>
+                                </div>
+                            </div>
+                            <button onclick="playWalkupSynth()" class="w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center active:scale-95 transition">
+                                <i class="fa-solid fa-play text-[10px]"></i>
+                            </button>
+                        </div>
+
+                        <!-- Cheer song (if any) -->
+                        <div id="cheer-container" class="bg-black/30 rounded-xl p-2.5 flex justify-between items-center border border-white/5">
+                            <div class="flex items-center space-x-2.5">
+                                <div class="w-7 h-7 rounded-lg bg-giantsRed/20 flex items-center justify-center text-giantsRed text-xs">
+                                    <i class="fa-solid fa-music"></i>
+                                </div>
+                                <div class="max-w-[150px] sm:max-w-[190px]">
+                                    <p class="text-[8px] text-giantsRed font-bold uppercase leading-none">공식 응원가</p>
+                                    <p id="player-cheer" class="text-xs font-bold text-white truncate mt-0.5">가사 요약</p>
+                                </div>
+                            </div>
+                            <button id="cheer-play-btn" onclick="playCheerSynth()" class="w-7 h-7 rounded-full bg-giantsRed hover:bg-red-600 text-white flex items-center justify-center active:scale-95 transition">
+                                <i class="fa-solid fa-play text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Toggle Back to Full Lineup Card -->
+                    <button onclick="resetToLineupCard()" class="w-full bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white font-bold text-xs py-2 rounded-xl transition border border-white/10 mt-2 flex items-center justify-center space-x-1.5">
+                        <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                        <span>스타팅 라인업 카드로 돌아가기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide-Out Drawer for Additional Pitchers -->
+    <div id="pitcher-drawer" class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-giantsDarkNavy border-l border-white/10 shadow-2xl p-6 translate-x-full transition-transform duration-300 flex flex-col justify-between">
+        <div>
+            <div class="flex justify-between items-center border-b border-white/10 pb-4 mb-6">
+                <h3 class="font-title text-2xl text-white">🔥 스페셜 투수 라인업</h3>
+                <button onclick="togglePitcherDrawer(false)" class="text-slate-400 hover:text-white transition">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Pitcher Cards List -->
+            <div class="space-y-4 overflow-y-auto max-h-[70vh] pr-2">
+                <!-- Kim Won Jung -->
+                <div onclick="selectPlayer('kim_wj')" class="cursor-pointer bg-giantsNavy/40 border border-white/5 hover:border-giantsRed/50 rounded-2xl p-4 transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="bg-giantsRed text-white text-[9px] font-bold px-2 py-0.5 rounded-full">CLOSER</span>
+                        <span class="font-title text-xl text-slate-500">#34</span>
+                    </div>
+                    <h4 class="font-title text-xl text-white">김원중 🔒</h4>
+                    <p class="text-slate-400 text-xs mt-1">포효 데시벨 150%, 장발 리벨 지수 200%. 사직구장을 뒤흔드는 특급 소방수.</p>
+                </div>
+
+                <!-- Park Jung Min -->
+                <div onclick="selectPlayer('park_jm')" class="cursor-pointer bg-giantsNavy/40 border border-white/5 hover:border-giantsRed/50 rounded-2xl p-4 transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="bg-indigo-900 text-white text-[9px] font-bold px-2 py-0.5 rounded-full">ROOKIE</span>
+                        <span class="font-title text-xl text-slate-500">#19</span>
+                    </div>
+                    <h4 class="font-title text-xl text-white">박정민 👶</h4>
+                    <p class="text-slate-400 text-xs mt-1">2026 루키 기백 200%, 견제구 정확도 95%. 신인왕 후보로 떠오른 완소 좌완 루키.</p>
+                </div>
+
+                <!-- Hyun Do Hoon -->
+                <div onclick="selectPlayer('hyun_dh')" class="cursor-pointer bg-giantsNavy/40 border border-white/5 hover:border-giantsRed/50 rounded-2xl p-4 transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="bg-slate-700 text-white text-[9px] font-bold px-2 py-0.5 rounded-full">RELIEF</span>
+                        <span class="font-title text-xl text-slate-500">#66</span>
+                    </div>
+                    <h4 class="font-title text-xl text-white">현도훈 🔥</h4>
+                    <p class="text-slate-400 text-xs mt-1">인간승리 지수 200%, 독기 투구 120%. 고난의 시간을 이겨낸 구장 최고의 승부사.</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-[10px] text-slate-500 text-center border-t border-white/5 pt-4">카드를 클릭하면 메인 상세 탭에서 등장곡과 주접스탯을 플레이할 수 있습니다.</p>
+    </div>
+
+    <!-- 3단계: 오감 자극 사직 사운드 (Sounds & Mini-Game) -->
+    <section id="sounds" class="py-20 bg-gradient-to-b from-giantsDarkNavy to-giantsNavy/30 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-title text-3xl md:text-5xl text-white mb-4">🔊 오감 만족 사직 사운드 플레이그라운드</h2>
+                <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
+                    사직 구장의 리얼 떼창, 지진급 "마!" 포효, 대량 득점의 환희를 웹 인터랙션으로 완벽 복원했습니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Sound Option 1: Ma! Shockwave -->
+                <div class="bg-black/40 border border-white/10 rounded-3xl p-6 text-center flex flex-col justify-between h-[320px] shadow-lg">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-giantsRed/10 text-giantsRed text-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3 class="font-title text-2xl text-white mb-2">견제 시 포효 "마!"</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            상대 투수의 견제구가 발동되는 순간 외치는 사직의 상징. <br>버튼 클릭 시 화끈한 포효 소리와 함께 <strong>화면 전체 진동 효과</strong>가 재생됩니다.
+                        </p>
+                    </div>
+                    <button onclick="playMaSound()" class="w-full bg-giantsRed text-white font-bold py-3.5 rounded-2xl hover:bg-red-700 active:scale-95 transition flex items-center justify-center space-x-2">
+                        <span>견제구 날리기! "마!"</span> <i class="fa-solid fa-burst"></i>
+                    </button>
+                </div>
+
+                <!-- Sound Option 2: Flash Light Show -->
+                <div id="flash-card" class="bg-black/40 border border-white/10 rounded-3xl p-6 text-center flex flex-col justify-between h-[320px] shadow-lg relative overflow-hidden transition-all duration-300">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-full bg-slate-800 text-giantsGold text-xl flex items-center justify-center mx-auto mb-4 animate-pulse">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="font-title text-2xl text-white mb-2">7회 초 끝난 후 "부산갈매기"</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            사직의 7회 초가 끝난 뒤, 모든 조명이 꺼지고 스마트폰 플래시가 파도를 타며 우렁찬 떼창이 시작됩니다.
+                        </p>
+                    </div>
+                    <button onclick="toggleFlashlightShow()" class="relative z-10 w-full bg-giantsNavy text-white font-bold py-3.5 rounded-2xl hover:bg-slate-800 active:scale-95 transition border border-white/10 flex items-center justify-center space-x-2">
+                        <span id="flash-btn-txt">플래시 떼창 시작</span> <i class="fa-solid fa-mobile-screen-button"></i>
+                    </button>
+                </div>
+
+                <!-- Sound Option 3: Rhythm Tap Game -->
+                <div class="bg-black/40 border border-white/10 rounded-3xl p-6 text-center flex flex-col justify-between h-[320px] shadow-lg">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-giantsGold/10 text-giantsGold text-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <h3 class="font-title text-2xl text-white mb-2">어기여디여차 득점송</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            대량 득점의 빅이닝 찬스! 신나는 리듬에 맞춰 파도를 타는 박자를 맞춰 탭을 누르세요. 스트레스를 격파하는 미니 리듬탭.
+                        </p>
+                    </div>
+                    <!-- Small Mini-Tap Game Component -->
+                    <div class="bg-giantsDarkNavy rounded-2xl p-2 border border-white/5 flex items-center justify-between space-x-3">
+                        <div class="text-left pl-2">
+                            <p class="text-[10px] text-slate-400">성공 타격 횟수</p>
+                            <p class="text-lg font-bold text-giantsGold"><span id="tap-score">0</span> HIT!</p>
+                        </div>
+                        <button onclick="triggerRhythmTap(event)" class="bg-giantsGold text-giantsDarkNavy font-bold text-xs px-5 py-2.5 rounded-xl hover:bg-yellow-500 active:scale-95 transition">
+                            어기여디- (탭!)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4단계: 사직 금강산도 식후경 (F&B & Goods) -->
+    <section id="food-goods" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-title text-3xl md:text-5xl text-white mb-4">🍕 2026 사직야구장 미식 & 필수 굿즈</h2>
+            <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
+                KBO 최고의 미식 성지로 탄양한 2026 사직 맛집과 무조건 소장해야 하는 사직 한정판 굿즈 라인업입니다.
+            </p>
+        </div>
+
+        <!-- F&B Grid -->
+        <h3 class="font-title text-2xl text-giantsRed mb-6 border-l-4 border-giantsRed pl-3">🔥 2026 먹방 신흥강자 베스트 4</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <!-- Restaurant 1 -->
+            <div class="bg-giantsNavy/30 border border-white/10 rounded-2xl overflow-hidden hover:border-giantsRed/50 transition">
+                <img src="https://placehold.co/400x250/E30613/FFFFFF?text=Songheon+Sausage" alt="송헌집 소시지" class="w-full h-40 object-cover" onerror="this.src='https://placehold.co/400x250/333/fff?text=No+Image'">
+                <div class="p-4">
+                    <span class="text-[10px] bg-red-600/20 text-red-400 font-bold px-2 py-0.5 rounded-full">KBO 최초 미슐랭</span>
+                    <h4 class="font-title text-lg text-white mt-2">송헌집 프리미엄 소시지 🌭</h4>
+                    <p class="text-slate-400 text-xs mt-1 leading-relaxed">미슐랭 가이드가 인정한 떡갈비급 소세지 육즙! 직관과 맥주의 최강 조합.</p>
+                </div>
+            </div>
+
+            <!-- Restaurant 2 -->
+            <div class="bg-giantsNavy/30 border border-white/10 rounded-2xl overflow-hidden hover:border-giantsRed/50 transition">
+                <img src="https://placehold.co/400x250/041E42/FFFFFF?text=Parksu+Dining" alt="박수식당" class="w-full h-40 object-cover" onerror="this.src='https://placehold.co/400x250/333/fff?text=No+Image'">
+                <div class="p-4">
+                    <span class="text-[10px] bg-indigo-500/20 text-indigo-300 font-bold px-2 py-0.5 rounded-full">남포동 핫플레이스</span>
+                    <h4 class="font-title text-lg text-white mt-2">박수식당 한우육회 🥩</h4>
+                    <p class="text-slate-400 text-xs mt-1 leading-relaxed">남포동 성지가 사직 상륙! 환상적인 젓갈김밥과 쫄깃한 소고기 육회의 정수.</p>
+                </div>
+            </div>
+
+            <!-- Restaurant 3 -->
+            <div class="bg-giantsNavy/30 border border-white/10 rounded-2xl overflow-hidden hover:border-giantsRed/50 transition">
+                <img src="https://placehold.co/400x250/111827/FFFFFF?text=Kokamome+Tendong" alt="코카모메" class="w-full h-40 object-cover" onerror="this.src='https://placehold.co/400x250/333/fff?text=No+Image'">
+                <div class="p-4">
+                    <span class="text-[10px] bg-yellow-500/20 text-yellow-300 font-bold px-2 py-0.5 rounded-full">겉바속촉 튀김</span>
+                    <h4 class="font-title text-lg text-white mt-2">코카모메 수제 텐동 🍤</h4>
+                    <p class="text-slate-400 text-xs mt-1 leading-relaxed">부산 전역을 휩쓴 텐동 지존의 맛. 주문 즉시 튀겨 오랫동안 바삭바삭합니다.</p>
+                </div>
+            </div>
+
+            <!-- Restaurant 4 -->
+            <div class="bg-giantsNavy/30 border border-white/10 rounded-2xl overflow-hidden hover:border-giantsRed/50 transition">
+                <img src="https://placehold.co/400x250/021024/FFFFFF?text=Simbada+Sashimi" alt="심바다 물회" class="w-full h-40 object-cover" onerror="this.src='https://placehold.co/400x250/333/fff?text=No+Image'">
+                <div class="p-4">
+                    <span class="text-[10px] bg-teal-500/20 text-teal-300 font-bold px-2 py-0.5 rounded-full">야구장 컵물회</span>
+                    <h4 class="font-title text-lg text-white mt-2">심바다 이색 컵물회 🐟</h4>
+                    <p class="text-slate-400 text-xs mt-1 leading-relaxed">느끼한 음식에 지친 입안을 시원하게 정화하는 야구장 속 신선한 회&초밥 테마.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Goods Area -->
+        <h3 class="font-title text-2xl text-giantsGold mb-6 border-l-4 border-giantsGold pl-3">🛍️ 2026 자이언츠 2대 필수 굿즈</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gradient-to-r from-giantsDarkNavy to-giantsNavy border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <div class="w-24 h-24 rounded-full bg-amber-500/20 flex items-center justify-center text-giantsGold text-4xl flex-shrink-0">
+                    <i class="fa-solid fa-cat"></i>
+                </div>
+                <div>
+                    <h4 class="font-title text-xl text-white">마스코트 '누리' 스페셜 키링 & 봉제 인형 🦁</h4>
+                    <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">귀여운 겉모습에 영혼은 야성미 넘치는 반전 매력으로 사직 매진 1위를 수성 중인 대세 마스코트 누리 특별 컬렉션.</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-giantsDarkNavy to-giantsNavy border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <div class="w-24 h-24 rounded-full bg-red-500/20 flex items-center justify-center text-giantsRed text-4xl flex-shrink-0">
+                    <i class="fa-solid fa-hands-clapping"></i>
+                </div>
+                <div>
+                    <h4 class="font-title text-xl text-white">사직 클래식 짝짝이 응원도구 👏</h4>
+                    <p class="text-slate-400 text-xs mt-1.5 leading-relaxed">사직 야구장에 없어서는 안 될 응원봉의 지존! 손가락 아플 필요 없이 짝짝이 소리로 경기장의 열기를 폭발시킵니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5단계: 흐린 눈 스코어보드 (Scoreboard Calendar) -->
+    <section id="scoreboard" class="py-20 bg-giantsDarkNavy/80 border-t border-b border-white/5 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-title text-3xl md:text-5xl text-white mb-4">📅 2026 자이언츠 흐린눈 경기기록</h2>
+                <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
+                    이긴 날은 축제처럼 웅장하게! 패배한 경기는 아주 작고 흐릿하게 처리한 <span class="text-giantsRed font-bold">자이언츠식 행복 야구 캘린더</span>입니다. 마우스를 올리면 흐릿한 마법이 풀립니다!
+                </p>
+            </div>
+
+            <!-- Calendar Container -->
+            <div class="bg-giantsNavy/30 border border-white/10 rounded-3xl p-6 shadow-2xl">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-title text-xl text-white flex items-center space-x-2">
+                        <i class="fa-regular fa-calendar-days text-giantsRed"></i>
+                        <span>2026년 7월 매치 캘린더</span>
+                    </h3>
+                    <span class="text-xs text-slate-400">※ 화~일 경기, 월요일 휴식(개발집중)</span>
+                </div>
+
+                <!-- Calendar Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+                    <!-- Day 1: MON (No Game) -->
+                    <div class="bg-black/20 border border-white/5 rounded-2xl p-4 flex flex-col justify-between h-36">
+                        <div class="flex justify-between text-slate-500 font-semibold text-xs">
+                            <span>MON</span>
+                            <span>07.01</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 font-bold text-center">경기 없음<br><span class="text-[9px] font-normal">코딩 알고리즘 집중일</span></p>
+                    </div>
+
+                    <!-- Day 2: TUE (Win vs Doosan) -->
+                    <div class="bg-giantsRed/20 border-2 border-giantsRed rounded-2xl p-4 flex flex-col justify-between h-36 relative overflow-hidden group shadow-lg shadow-giantsRed/10">
+                        <div class="flex justify-between text-giantsRed font-bold text-xs">
+                            <span>TUE</span>
+                            <span>07.02</span>
+                        </div>
+                        <div>
+                            <span class="text-[9px] bg-giantsRed text-white px-1 py-0.5 rounded-sm font-bold uppercase">vs 두산</span>
+                            <p class="text-2xl font-title text-white mt-1">5 : 2 승</p>
+                        </div>
+                        <p class="text-[10px] text-giantsGold font-semibold">잠실 원정 폭격! ⭐</p>
+                    </div>
+
+                    <!-- Day 3: WED (Loss vs Doosan) -->
+                    <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex flex-col justify-between h-36 loss-blur cursor-pointer">
+                        <div class="flex justify-between text-slate-500 font-semibold text-xs">
+                            <span>WED</span>
+                            <span>07.03</span>
+                        </div>
+                        <div>
+                            <span class="text-[8px] bg-slate-700 text-white/50 px-1 py-0.5 rounded-sm uppercase">vs 두산</span>
+                            <p class="text-xs text-slate-400 mt-1">3 : 8 패</p>
+                        </div>
+                        <p class="text-[9px] text-slate-500">에러 디버깅 시급...</p>
+                    </div>
+
+                    <!-- Day 4: THU (Win vs Doosan) -->
+                    <div class="bg-giantsRed/20 border-2 border-giantsRed rounded-2xl p-4 flex flex-col justify-between h-36 relative overflow-hidden group shadow-lg shadow-giantsRed/10">
+                        <div class="flex justify-between text-giantsRed font-bold text-xs">
+                            <span>THU</span>
+                            <span>07.04</span>
+                        </div>
+                        <div>
+                            <span class="text-[9px] bg-giantsRed text-white px-1 py-0.5 rounded-sm font-bold uppercase">vs 두산</span>
+                            <p class="text-2xl font-title text-white mt-1">7 : 4 승</p>
+                        </div>
+                        <p class="text-[10px] text-giantsGold font-semibold">위닝시리즈 달성! 🔥</p>
+                    </div>
+
+                    <!-- Day 5: FRI (Win vs KT) -->
+                    <div class="bg-giantsRed/20 border-2 border-giantsRed rounded-2xl p-4 flex flex-col justify-between h-36 relative overflow-hidden group shadow-lg shadow-giantsRed/10">
+                        <div class="flex justify-between text-giantsRed font-bold text-xs">
+                            <span>FRI</span>
+                            <span>07.05</span>
+                        </div>
+                        <div>
+                            <span class="text-[9px] bg-giantsRed text-white px-1 py-0.5 rounded-sm font-bold uppercase">vs KT</span>
+                            <p class="text-2xl font-title text-white mt-1">4 : 1 승</p>
+                        </div>
+                        <p class="text-[10px] text-giantsGold font-semibold">기세 폭발! ⭐</p>
+                    </div>
+
+                    <!-- Day 6: SAT (Loss vs KT) -->
+                    <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex flex-col justify-between h-36 loss-blur cursor-pointer">
+                        <div class="flex justify-between text-slate-500 font-semibold text-xs">
+                            <span>SAT</span>
+                            <span>07.06</span>
+                        </div>
+                        <div>
+                            <span class="text-[8px] bg-slate-700 text-white/50 px-1 py-0.5 rounded-sm uppercase">vs KT</span>
+                            <p class="text-xs text-slate-400 mt-1">2 : 4 패</p>
+                        </div>
+                        <p class="text-[9px] text-slate-500">내일 더 힘내자!</p>
+                    </div>
+
+                    <!-- Day 7: SUN (Win vs KT) -->
+                    <div class="bg-giantsRed/30 border-2 border-giantsGold rounded-2xl p-4 flex flex-col justify-between h-36 relative overflow-hidden group shadow-xl shadow-giantsGold/10">
+                        <div class="absolute -top-6 -right-6 w-16 h-16 bg-giantsGold/20 rounded-full blur-md pointer-events-none"></div>
+                        <div class="flex justify-between text-giantsGold font-bold text-xs">
+                            <span>SUN</span>
+                            <span>07.07</span>
+                        </div>
+                        <div>
+                            <span class="text-[9px] bg-giantsGold text-giantsDarkNavy px-1 py-0.5 rounded-sm font-bold uppercase">vs KT</span>
+                            <p class="text-3xl font-title text-white mt-1">12 : 5 승</p>
+                        </div>
+                        <p class="text-[10px] text-giantsGold font-bold animate-pulse">사직 주말 대폭발! 🎉</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6단계: 피날레 - 나랑 사직 갈 사람 여기여기 붙어라! (CTA & Live Join Board) -->
+    <section id="cta" class="py-24 px-4 bg-gradient-to-t from-giantsDarkNavy via-giantsDarkNavy to-giantsNavy/20 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[400px] bg-giantsRed/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-giantsGold font-title text-lg tracking-wider block mb-2">🔥 FINALE : SSAFY 1반 단체 파티원 모집</span>
+                <h2 class="font-title text-4xl sm:text-6xl text-white mb-6">"나랑 사직 갈 사람 지금 탑승해라 마!"</h2>
+                <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+                    에러 버그 디버깅에 머리 터질 것 같나요? <br>
+                    사직 구장에서 소세지 뜯고 다 같이 <strong>"마!"</strong> 외치는 직관 버스에 올라타세요. 
+                    아래에 닉네임과 한마디를 적어 실시간 탑승 명단에 이름을 올리세요!
+                </p>
+            </div>
+
+            <!-- Join Board Application -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <!-- Submit Form (5 Cols) -->
+                <form id="join-form" onsubmit="handleJoinSubmit(event)" class="md:col-span-5 bg-black/40 border border-white/10 p-6 rounded-3xl space-y-4">
+                    <h3 class="font-title text-lg text-white mb-2">사직 탑승권 정보 입력</h3>
+                    
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">닉네임 (SSAFY 1반 친구)</label>
+                        <input type="text" id="join-nick" required placeholder="예: 구미코딩왕" class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-giantsRed text-white transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1">한마디 던지기</label>
+                        <textarea id="join-message" required placeholder="예: 마! 송헌집 소세지 내가 쏜다 가자!" rows="3" class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-giantsRed text-white transition resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-giantsRed text-white font-bold py-3.5 rounded-xl hover:bg-red-700 transition active:scale-95 shadow-xl shadow-giantsRed/20 flex items-center justify-center space-x-2">
+                        <span>직관 버스 탑승! 👍</span> <i class="fa-solid fa-ticket"></i>
+                    </button>
+                </form>
+
+                <!-- Board Feed (7 Cols) -->
+                <div class="md:col-span-7 bg-black/20 border border-white/5 rounded-3xl p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="font-title text-md text-white flex items-center space-x-2">
+                            <i class="fa-solid fa-users text-giantsGold"></i>
+                            <span>실시간 탑승 현황 (익명)</span>
+                        </h4>
+                        <span class="text-[10px] text-slate-500">방금 업데이트</span>
+                    </div>
+
+                    <!-- Scrollable Board items -->
+                    <div id="board-feed" class="space-y-3 max-h-[300px] overflow-y-auto pr-2">
+                        <div class="bg-giantsNavy/20 border border-white/5 p-3 rounded-2xl">
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="font-bold text-giantsGold">구미의 붉은 날개</span>
+                                <span class="text-[9px] text-slate-500">방금 전</span>
+                            </div>
+                            <p class="text-xs text-slate-300">알고리즘 99번 에러 떴는데 오늘 사직 가서 소리 지르고 다 풀고 오렵니다. 마!</p>
+                        </div>
+
+                        <div class="bg-giantsNavy/20 border border-white/5 p-3 rounded-2xl">
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="font-bold text-giantsGold">임베디드 타격왕</span>
+                                <span class="text-[9px] text-slate-500">2분 전</span>
+                            </div>
+                            <p class="text-xs text-slate-300">타 팀 팬인데 솔직히 사직 분위기랑 박수식당 한우육회는 못 참지;; 같이 갑니다!</p>
+                        </div>
+
+                        <div class="bg-giantsNavy/20 border border-white/5 p-3 rounded-2xl">
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="font-bold text-giantsGold">이이무라 팬클럽</span>
+                                <span class="text-[9px] text-slate-500">5분 전</span>
+                            </div>
+                            <p class="text-xs text-slate-300">이바라키에서 온 아시아쿼터 이이무라 선수 실물 보러 갑니다 응원봉 짝짝이 완비요!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-giantsDarkNavy py-8 border-t border-white/10 text-center text-xs text-slate-500">
+        <p class="mb-2">⚾ 2026 롯데 자이언츠 & SSAFY 1반 비공식 도파민 빌드업 프로젝트</p>
+        <p>Designed and Built by Vanilla JS Giants Fan Developer. No cookies, just Pure Ki-sae.</p>
+    </footer>
+
+    <!-- Core Application Logic -->
+    <script>
+        // Web Audio Context for reliable zero-dependency sound synthesis
+        let audioCtx = null;
+
+        async function getAudioContext() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            // 브라우저 정책에 따른 오디오 활성화 (비동기 처리)
+            if (audioCtx.state === 'suspended') {
+                await audioCtx.resume();
+            }
+            return audioCtx;
+        }
+
+        // Synth function to generate energetic 8-bit sound effects for walkups / cheer
+        async function playTone(freq, duration, type = 'sine', gainVal = 0.2) {
+            try {
+                const ctx = await getAudioContext();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                
+                osc.type = type;
+                osc.frequency.setValueAtTime(freq, ctx.currentTime);
+                
+                gain.gain.setValueAtTime(gainVal, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+                
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                
+                osc.start();
+                osc.stop(ctx.currentTime + duration);
+            } catch (e) {
+                console.error("Audio error: ", e);
+            }
+        }
+
+        // Play synthetic bass/shudder sound representing the giant "마!"
+        function playMaSound() {
+            playTone(90, 0.5, 'triangle', 0.5);
+            setTimeout(() => playTone(50, 0.4, 'sawtooth', 0.4), 100);
+
+            document.body.classList.add('shake-active');
+            setTimeout(() => {
+                document.body.classList.remove('shake-active');
+            }, 400);
+        }
+
+        // Flashlight cheer effect switcher
+        let isFlashActive = false;
+        function toggleFlashlightShow() {
+            const card = document.getElementById('flash-card');
+            const btnText = document.getElementById('flash-btn-txt');
+            isFlashActive = !isFlashActive;
+
+            if (isFlashActive) {
+                card.classList.add('cheer-flash');
+                btnText.textContent = "플래시 떼창 중! (종료)";
+                playTone(392.00, 0.2, 'sine', 0.2); // G4
+                setTimeout(() => playTone(440.00, 0.2, 'sine', 0.2), 200); // A4
+                setTimeout(() => playTone(493.88, 0.2, 'sine', 0.2), 400); // B4
+                setTimeout(() => playTone(523.25, 0.4, 'sine', 0.2), 600); // C5
+            } else {
+                card.classList.remove('cheer-flash');
+                btnText.textContent = "플래시 떼창 시작";
+            }
+        }
+
+        // 어기여디여차 Rhythm Tap Logic
+        let tapScore = 0;
+        function triggerRhythmTap(event) {
+            tapScore++;
+            document.getElementById('tap-score').textContent = tapScore;
+            
+            playTone(523.25 + (tapScore * 20), 0.15, 'sine', 0.15);
+            
+            const btn = event.target;
+            btn.classList.add('scale-95', 'bg-yellow-400');
+            setTimeout(() => btn.classList.remove('scale-95', 'bg-yellow-400'), 100);
+        }
+
+        // Drawer Control Logic
+        function togglePitcherDrawer(open) {
+            const drawer = document.getElementById('pitcher-drawer');
+            if (open) {
+                drawer.classList.remove('translate-x-full');
+            } else {
+                drawer.classList.add('translate-x-full');
+            }
+        }
+
+        // Dynamic Players Database
+        const playersDb = {
+            hwang: {
+                name: "황성빈",
+                position: "중견수 (CF)",
+                backnumber: "#0",
+                desc: '"황성빈이 뛰면 사직의 심장이 뛴다." KBO 최고의 도발 마스터이자 기세를 담당하는 불타는 마황.',
+                walkup: "Baha Men - Who Let The Dogs Out",
+                cheer: "롯데의 황성빈 오오오~ 안타 안타 롯데 황성빈~ 황! 성! 빈!",
+                stats: [
+                    { label: "마황의 광란 도루 지수", value: "200%" },
+                    { label: "상대 투수 킹받게 하기", value: "999%" }
+                ]
+            },
+            ko: {
+                name: "고승민",
+                position: "1루수 (1B)",
+                backnumber: "#2",
+                desc: "타격 감각만큼은 미워할 수 없는 롯데의 깊이 반성 중인 천재 야수. 1루 미트를 빨아들이는 안정감.",
+                walkup: "The Script - Hall Of Fame",
+                cheer: "롯~데의~ 고승민 안타 안타~ 워어어 워어어 워어어어~",
+                stats: [
+                    { label: "반성문 타격 정밀도", value: "100%" },
+                    { label: "대만 현지 사과 지수", value: "100%" },
+                    { label: "1루 미트 흡입력", value: "95%" }
+                ]
+            },
+            reyes: {
+                name: "레이예스",
+                position: "좌익수 (LF)",
+                backnumber: "#29",
+                desc: "필요할 때마다 타선을 살려내는 최고의 외인 타자이자 사직의 외야 수호벽.",
+                walkup: "TWICE - YES or YES",
+                cheer: "빅터 레이예스 안타 홈런 오오오 빅터 레이예스 오오오 오오",
+                stats: [
+                    { label: "안타 생산력 (Hit Index)", value: "200%" },
+                    { label: "클러치 해결력", value: "만점" }
+                ]
+            },
+            han_dh: {
+                name: "한동희",
+                position: "지명타자 (DH)",
+                backnumber: "#25",
+                desc: "상무 전역 후 완성형 피지컬로 무장한 거포 본능! 시원하고 웅장하게 좌측 담장을 부숴줍니다. 수비 능력치는 쪼끔 아쉬우니 배트에 집중합시다.",
+                walkup: "DAY6 - Welcome to the Show",
+                cheer: "롯데의 한~동희 오오~ 롯데 한동희 안타! 롯데 한동희 홈런!",
+                stats: [
+                    { label: "거포 본능 홈런율", value: "150%" },
+                    { label: "파워 가득 피지컬", value: "120%" },
+                    { label: "수비 능력치", value: "솔직히 쪼금... 아쉬움" }
+                ]
+            },
+            han_ty: {
+                name: "한태양",
+                position: "2루수 (2B)",
+                backnumber: "#13",
+                desc: "경기 시작 전 경건하게 그라운드 컨디션을 일일이 체크하는 진정한 프로 정신. 비주얼과 수비를 모두 잡은 사직의 독보적 비주얼 1짱.",
+                walkup: "Michael Bublé - Feeling Good",
+                cheer: "롯데 한태양~ 오오오 오오 오오오~ 한태양 안타 쌔리라 오오오오오",
+                stats: [
+                    { label: "그라운드 정밀 체크율", value: "150%" },
+                    { label: "독보적인 꽃미모 일짱 지수", value: "1000%" }
+                ]
+            },
+            yoon: {
+                name: "윤동희",
+                position: "우익수 (RF)",
+                backnumber: "#91",
+                desc: "외야에서 홈까지 오차 없이 자로 잰 듯 정확하게 던지는 레이저 송구의 주인공이자 차기 국가대표 외야 비주얼 3대장.",
+                walkup: "Bishop Briggs - CHAMPION",
+                cheer: "롯데의 윤동희 쌔리라 안타 쌔리라 최강롯데 자이언츠 윤동희",
+                stats: [
+                    { label: "사직 조각미남 지수", value: "999%" },
+                    { label: "홈 레이저 송구 정확도", value: "97%" }
+                ]
+            },
+            jeon: {
+                name: "전민재",
+                position: "유격수 (SS)",
+                backnumber: "#2",
+                desc: "물샐틈없는 완벽 유격수 수비! 빠른 발과 지독하게 영리한 야구 스킬로 분위기를 장악하는 내야진 보석.",
+                walkup: "The Score - Unstoppable",
+                cheer: "롯데의 전민재 롯데의 전민재 안타 오오오오 오 오오 오 롯데 전민재~ (전민재)",
+                stats: [
+                    { label: "유격 완벽 수비 점유율", value: "99%" },
+                    { label: "작전 및 번트 성공률", value: "96%" }
+                ]
+            },
+            son_hy: {
+                name: "손호영",
+                position: "3루수 (3B)",
+                backnumber: "#5",
+                desc: "이적 즉시 안타쇼와 핫코너 호수비를 뿌리며 롯데 팬들의 거대한 사랑을 받는 히어로.",
+                walkup: "SEVENTEEN - 손오공 (Super)",
+                cheer: "롯데의 손호영~ 안타 쌔리라~ 롯데의 손호영 오오오오~",
+                stats: [
+                    { label: "결승타 클러치 확률", value: "150%" },
+                    { label: "3루 핫코너 자석 수비", value: "99%" }
+                ]
+            },
+            son_sb: {
+                name: "손성빈",
+                position: "포수 (C)",
+                backnumber: "#9",
+                desc: "사직의 든든한 안방마님. 주자의 움직임을 원천 차단하는 도루 저지 최단 팝타임 보유자.",
+                walkup: "The Score - Higher",
+                cheer: "최강롯데 자이언츠 롯데 손성빈 안타 손성빈 오오오오~",
+                stats: [
+                    { label: "도루 저지 어깨 데시벨", value: "KBO 탑티어" },
+                    { label: "투수 멘탈 든든 지원율", value: "100%" }
+                ]
+            },
+            kim_ju: {
+                name: "김진욱",
+                position: "선발 투수 (SP)",
+                backnumber: "#15",
+                desc: "아름다운 슬라이더 궤적으로 마운드를 평정하는 좌완 부활의 신호탄 에이스.",
+                walkup: "FUN. - We Are Young",
+                cheer: "투수 응원가는 따로 존재하지 않습니다. 등장곡 멜로디에 기세를 실어주세요!",
+                stats: [
+                    { label: "좌완 탈삼진 예술지수", value: "99%" },
+                    { label: "마운드 기세 집중력", value: "최상급" }
+                ]
+            },
+            iimura: {
+                name: "이이무라",
+                position: "구원 투수 (RP)",
+                backnumber: "#41",
+                desc: "이바라키현에서 사직으로 날아온 2026 뉴 아시아쿼터 불펜 핵잠수함.",
+                walkup: "G-DRAGON - POWER",
+                cheer: "투수 응원가는 따로 존재하지 않습니다. 등장곡 POWER와 씩씩한 투구에 집중하세요!",
+                stats: [
+                    { label: "사직 아시아쿼터 적응 지수", value: "100%" },
+                    { label: "불펜 짠물 억제율", value: "94%" }
+                ]
+            },
+            kim_wj: {
+                name: "김원중",
+                position: "마무리 투수 (CL)",
+                backnumber: "#34",
+                desc: "포효 데시벨 150%, 장발 리벨 지수 200%. 사직구장의 빗장을 완벽히 걸어 잠그는 절대 수호 마무리.",
+                walkup: "AC/DC - Hells Bells",
+                cheer: "투수 응원가는 따로 존재하지 않습니다. 구원의 종소리에 박수갈채를 보내세요!",
+                stats: [
+                    { label: "포효 데시벨 레벨", value: "150%" },
+                    { label: "장발 리벨 매칭율", value: "200%" }
+                ]
+            },
+            park_jm: {
+                name: "박정민",
+                position: "구원 투수 (RP)",
+                backnumber: "#19",
+                desc: "2026 2라운드로 영입되어 미래가 촉망받는 패기 만점 좌완 신인왕 후보.",
+                walkup: "Fifth Harmony - Worth It",
+                cheer: "투수 응원가는 따로 존재하지 않습니다. 신인 특유의 씩씩한 전력투구를 감상하세요!",
+                stats: [
+                    { label: "루키 순수 기백", value: "200%" },
+                    { label: "칼날 견제 성공률", value: "95%" }
+                ]
+            },
+            hyun_dh: {
+                name: "현도훈",
+                position: "구원 투수 (RP)",
+                backnumber: "#66",
+                desc: "독립리그 파주 챌린저스에서 시작해 고난을 딛고 보석이 된 인간승리의 표본이자 투지 넘치는 구원투수.",
+                walkup: "DAY6 - 영광의 순간",
+                cheer: "투수 응원가는 따로 존재하지 않습니다. 포기를 모르는 인간승리 마운드!",
+                stats: [
+                    { label: "독기 가득 투구율", value: "120%" },
+                    { label: "인간승리 감동 지수", value: "200%" }
+                ]
+            }
+        };
+
+        // Select Player on Ground and render interactive Detail Card
+        function selectPlayer(key) {
+            const player = playersDb[key];
+            if (!player) return;
+
+            togglePitcherDrawer(false);
+
+            // Hide lineup placeholder list & Show Player Card with transition
+            document.getElementById('lineup-placeholder-card').classList.add('hidden');
+            const card = document.getElementById('profile-card');
+            card.classList.remove('hidden');
+
+            document.getElementById('player-name').textContent = player.name;
+            document.getElementById('player-position').textContent = player.position;
+            document.getElementById('player-backnumber').textContent = player.backnumber;
+            document.getElementById('player-desc').textContent = player.desc;
+            document.getElementById('player-walkup').textContent = player.walkup;
+            
+            // Cheer Song setup
+            const cheerTxt = document.getElementById('player-cheer');
+            cheerTxt.textContent = player.cheer;
+
+            // Generate Stats HTML
+            const statsContainer = document.getElementById('player-stats');
+            statsContainer.innerHTML = '';
+            player.stats.forEach(stat => {
+                const statRow = document.createElement('div');
+                statRow.className = "flex justify-between items-center bg-white/5 px-3 py-2 rounded-lg border border-white/5";
+                statRow.innerHTML = `
+                    <span class="text-xs text-slate-400">${stat.label}</span>
+                    <span class="text-xs font-bold text-giantsGold">${stat.value}</span>
+                `;
+                statsContainer.appendChild(statRow);
+            });
+
+            if (window.innerWidth < 1024) {
+                document.getElementById('player-profile-column').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            playTone(440, 0.1, 'sine', 0.1);
+        }
+
+        // Reset to STARTING LINEUP placeholder view card
+        function resetToLineupCard() {
+            document.getElementById('profile-card').classList.add('hidden');
+            document.getElementById('lineup-placeholder-card').classList.remove('hidden');
+            playTone(330, 0.1, 'sine', 0.1);
+        }
+
+        // Walkup Synth Preview Melody
+        function playWalkupSynth() {
+            playTone(523.25, 0.15, 'square', 0.15); // C5
+            setTimeout(() => playTone(659.25, 0.15, 'square', 0.15), 150); // E5
+            setTimeout(() => playTone(783.99, 0.25, 'square', 0.15), 300); // G5
+        }
+
+        // Cheer Synth Preview Melody
+        function playCheerSynth() {
+            playTone(587.33, 0.1, 'sine', 0.2); // D5
+            setTimeout(() => playTone(698.46, 0.1, 'sine', 0.2), 100); // F5
+            setTimeout(() => playTone(880.00, 0.3, 'sine', 0.2), 200); // A5
+        }
+
+        // Handle CTA Join board submission (Appends item locally)
+        function handleJoinSubmit(e) {
+            e.preventDefault();
+            const nickname = document.getElementById('join-nick').value.trim();
+            const message = document.getElementById('join-message').value.trim();
+
+            if (!nickname || !message) return;
+
+            const feed = document.getElementById('board-feed');
+            const newPost = document.createElement('div');
+            newPost.className = "bg-giantsRed/20 border border-giantsRed/30 p-3 rounded-2xl transition animate-pulse";
+            newPost.innerHTML = `
+                <div class="flex justify-between text-xs mb-1">
+                    <span class="font-bold text-giantsGold">${nickname} 🎟️</span>
+                    <span class="text-[9px] text-slate-400">방금 전</span>
+                </div>
+                <p class="text-xs text-slate-200">${message}</p>
+            `;
+
+            feed.insertBefore(newPost, feed.firstChild);
+
+            document.getElementById('join-nick').value = '';
+            document.getElementById('join-message').value = '';
+            playTone(880, 0.1, 'sine', 0.1);
+            setTimeout(() => playTone(1046.50, 0.2, 'sine', 0.15), 100);
+
+            newPost.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            setTimeout(() => {
+                newPost.classList.remove('animate-pulse');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
